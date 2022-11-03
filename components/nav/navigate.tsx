@@ -10,7 +10,11 @@ import ListItemText from "@mui/material/ListItemText";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Button from "@mui/material/Button";
 
-const Navigate = ({ setOpenNewTweet }) => {
+interface Props {
+  setOpenNewTweet: (args: boolean) => void;
+}
+
+const Navigate: React.FC<Props> = ({ setOpenNewTweet }) => {
   return (
     <div style={{ maxWidth: "200px" }}>
       <TwitterIcon sx={{ marginLeft: "15px", marginTop: "15px" }} />
