@@ -1,10 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { TweetInput } from '../components/input'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Navigate from "../components/nav/navigate";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-   <TweetInput />
-  )
+    <div>
+      <Navigate />
+    </div>
+  );
 }
