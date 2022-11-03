@@ -10,7 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Button from "@mui/material/Button";
 
-const Navigate = () => {
+const Navigate = ({ setOpenNewTweet }) => {
   return (
     <div style={{ maxWidth: "200px" }}>
       <TwitterIcon sx={{ marginLeft: "15px", marginTop: "15px" }} />
@@ -41,7 +41,14 @@ const Navigate = () => {
         </ListItem>
       </List>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button variant="contained">New Tweet</Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            setOpenNewTweet(true);
+          }}
+        >
+          New Tweet
+        </Button>
       </div>
     </div>
   );
