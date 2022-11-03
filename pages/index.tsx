@@ -67,7 +67,7 @@ export default function Home() {
           left: 300,
         }}
       >
-        {tweets.map((tweet, key) => (
+        {tweets.reverse().map((tweet, key) => (
           <div key={key}>
             {/* @ts-ignore */}
             <p>{tweet.content}</p>
