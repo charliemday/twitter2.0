@@ -22,7 +22,9 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((x) => fetchTweets());
+    })
+      .then((x) => fetchTweets())
+      .then((y) => setOpenNewTweet(false));
   };
 
   const fetchTweet = async (id: number) => {
