@@ -10,10 +10,13 @@ export default function Home() {
     const response = await fetch("/tweets/");
   };
 
-  const createTweets = async (body: any) => {
+  const createTweets = async (body: {
+    user: number;
+    content: string;
+  }) => {
     await fetch("/tweets/", {
       method: "POST",
-      body,
+      body: JSON.stringify(body),
     });
   };
 
