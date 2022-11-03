@@ -1,6 +1,7 @@
 import HomeIcon from "@mui/icons-material/Home";
 import Box from "@mui/material/Box";
 import TagIcon from "@mui/icons-material/Tag";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -12,6 +13,7 @@ import Button from "@mui/material/Button";
 const Navigate = () => {
   return (
     <div style={{ maxWidth: "200px" }}>
+      <TwitterIcon sx={{ marginLeft: "15px", marginTop: "15px" }} />
       <List>
         <ListItem disablePadding>
           <ListItemButton>
