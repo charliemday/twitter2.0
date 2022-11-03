@@ -15,10 +15,14 @@ export default function Home() {
   };
 
   const createTweets = async (body: { user: number; content: string }) => {
-    await fetch("/tweets/", {
+    console.log(JSON.stringify(body));
+    await fetch(`${BASE_URL}/tweets/`, {
       method: "POST",
       body: JSON.stringify(body),
-    });
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((x) => fetchTweets());
   };
 
   const fetchTweet = async (id: number) => {
@@ -47,7 +51,12 @@ export default function Home() {
 
   return (
     <div>
-      <DialogTweet open={openNewTweet} setOpen={setOpenNewTweet} />
+      <DialogTweet
+        fetch={fetchTweets}
+        open={openNewTweet}
+        setOpen={setOpenNewTweet}
+        send={createTweets}
+      />
       <Navigate setOpenNewTweet={setOpenNewTweet} />
       <div
         style={{

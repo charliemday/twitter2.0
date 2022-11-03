@@ -13,7 +13,8 @@ import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
 import { TextField } from "@mui/material";
 
-const DialogTweet = ({ open, setOpen }) => {
+const DialogTweet = ({ open, setOpen, send, fetch }) => {
+  const [text, setText] = React.useState("");
   return (
     <Dialog
       onClose={() => {
@@ -23,6 +24,8 @@ const DialogTweet = ({ open, setOpen }) => {
     >
       <DialogTitle>New Tweet</DialogTitle>
       <TextField
+        onChange={(e) => setText(e.target.value)}
+        value={text}
         id="outlined-basic"
         label="Write tweet"
         variant="outlined"
@@ -33,7 +36,7 @@ const DialogTweet = ({ open, setOpen }) => {
       <Button
         variant="contained"
         onClick={() => {
-          console.log("send");
+          send({ user: 1, content: text });
         }}
       >
         New Tweet
