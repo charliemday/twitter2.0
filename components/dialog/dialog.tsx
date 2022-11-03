@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
 import { TextField } from "@mui/material";
 
+// @ts-ignore
 const DialogTweet = ({ open, setOpen, send, fetch }) => {
   const [text, setText] = React.useState("");
   return (
