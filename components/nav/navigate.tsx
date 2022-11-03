@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 
 const Navigate = () => {
   return (
-    <div>
+    <div style={{ maxWidth: "200px" }}>
       <List>
         <ListItem disablePadding>
           <ListItemButton>
